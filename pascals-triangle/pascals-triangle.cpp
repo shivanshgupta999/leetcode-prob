@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>> generate(int n) {
-         vector<vector<int>> ans;
+         vector<vector<int>> ans; //2d vector to return ans
         for(int i=0;i<n;i++){
             vector<int> temp(i+1);
             for(int j=0;j<i+1;j++){
