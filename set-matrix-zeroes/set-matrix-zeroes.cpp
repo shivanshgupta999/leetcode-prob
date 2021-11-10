@@ -25,7 +25,7 @@ public:
                   mat[i][*it]=0;
             }
             
-       
+       //KAM BOLO
     
     }
 };
