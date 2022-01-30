@@ -1,10 +1,10 @@
 class Solution {
 public:
-    void solveSudoku(vector<vector<char>>& b) {
-        solveSudoku(b,0,0);
+    void solveSudoku(vector<vector<char>>& b){
+        solveSudoku(b,0,0) ;
     }
-    bool solveSudoku(vector<vector<char>>& b,int row,int col){
-        for(int i=0;i<9;i++){
+    bool solveSudoku( vector<vector<char>>& b, int row,  int col){
+        for(int i=row;i<9;i++){
          for(int j=0;j<9;j++){
              
           if(b[i][j]=='.'){
