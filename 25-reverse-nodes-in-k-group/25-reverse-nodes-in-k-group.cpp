@@ -17,7 +17,7 @@ public:
             temp=temp->next;
             n++;
         }
-        ListNode* newn= new ListNode(0);
+        ListNode* newn= new ListNode(-1);
         newn->next=head;
         ListNode* prev=newn,*cur,*ne;
         while(n>=k){
@@ -32,7 +32,9 @@ public:
             n-=k;
             prev=cur;
         }
-        return newn->next;
+        prev=newn->next;
+        delete newn;
+        return prev;
         
        
     }
