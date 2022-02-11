@@ -22,7 +22,7 @@ class Solution
 {
     public:
     static bool cmp(Item a, Item b){
-        return (double)a.value/(double)a.weight>(double)b.value/(double)b.weight;
+        return (double)a.value/a.weight>(double)b.value/b.weight;
     }
     //Function to get the maximum total value in the knapsack.
     double fractionalKnapsack(int w, Item arr[], int n)
