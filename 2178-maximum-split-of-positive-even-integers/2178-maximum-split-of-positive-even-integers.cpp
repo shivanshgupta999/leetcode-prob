@@ -24,16 +24,20 @@ public:
        
          if(f%2!=0) return {};
         vector<long long> ans;
-        long long j=2;
-        while(f>0){
-            if(j>=f/2){
-                ans.push_back(f);
+        long long i=2,sum=0;
+        while(sum+i<=f){
+            
+            ans.push_back(i);
+            sum+=i;
+            if(sum==f){
                 return ans;
             }
-            ans.push_back(j);
-            f-=j;
-            j+=2;
+            i+=2;
+            
         }
+       long long b= ans.back();
+        ans.pop_back();
+        ans.push_back(f-sum+b);
         return ans;/* 
         if(fs%2!=0 || fs<5){
             vector<long long> ans;
