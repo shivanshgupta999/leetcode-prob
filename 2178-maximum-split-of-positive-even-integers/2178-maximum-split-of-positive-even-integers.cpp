@@ -26,7 +26,7 @@ public:
         vector<long long> ans;
         long long j=2;
         while(f>0){
-            if(f-j<=j){
+            if(j>=f/2){
                 ans.push_back(f);
                 return ans;
             }
