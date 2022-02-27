@@ -6,17 +6,7 @@ public:
             return v[0];
         int s=0,e=n-1;
         while(s<e){
-            int mid=(s+e)/2;
-            if(e-s==2){
-                if(v[mid]==v[mid-1])
-                return v[mid+1];
-            
-            else if(v[mid]==v[mid+1])
-                 return v[mid-1];
-            else
-                return v[mid];
-            }
-            
+            int mid=(s+e)/2;      
             
    if(mid%2==0)
             if(v[mid]==v[mid-1]){
