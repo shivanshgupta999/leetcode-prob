@@ -20,12 +20,12 @@ public:
                 i++;
             }
             if(i>=n)break;
-            int j=i;
+            int j=i+1;
             while(j<n && s[j]!=' '){
                 j++;
             }
            ans=' '+ s.substr(i,j-i) + ans;
-           i=j;
+           i=j+1;
             
         }
         
