@@ -9,13 +9,10 @@ public:
         while(s[i]==' '){
             i++;
         }
-        int cnt=0;
-        while(s[i]=='-' || s[i]=='+'){
+    
+        if(s[i]=='-' || s[i]=='+'){
             sign= s[i]=='-'?-1:1;
             i++;
-            cnt++;
-           if(cnt==2)
-               return 0;
         }
         
        
@@ -27,8 +24,8 @@ public:
             if(ans>mod/10 || (ans==mod/10 && s[i]>'7')){
                 return sign==1 ? INT_MAX:INT_MIN;
             }
-           // int p = pow(10,(n-i-1)) %mod ;
-            ans=( ans*10 + x ) ;
+          
+            ans= ans*10 + x ;
         }
         return ans*sign;
     }
