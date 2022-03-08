@@ -20,12 +20,12 @@ public:
         for(i;i<n;i++){
             if(s[i]>'9' || s[i]<'0')
                 break;
-           int x= s[i]-48;
+        
             if(ans>mod/10 || (ans==mod/10 && s[i]>'7')){
                 return sign==1 ? INT_MAX:INT_MIN;
             }
           
-            ans= ans*10 + x ;
+            ans= ans*10 + (s[i]-48 );
         }
         return ans*sign;
     }
