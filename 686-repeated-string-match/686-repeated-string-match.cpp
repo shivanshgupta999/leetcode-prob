@@ -1,14 +1,14 @@
 class Solution {
 public:
-    bool check(string a, string b){
-        int j=0;
-        for(int i=0;i<=a.size()-b.size();i++){
+    bool check(string a, string& b){
+        int j=0,n1=a.size(),n2=b.size();
+        for(int i=0;i<=n1-n2;i++){
            for (j = 0; j < b.size(); j++){
                 if(a[i+j]!=b[j]){
                     break;
                 }       
            }
-               if(j==b.size())
+               if(j==n2)
             return true;
         }
         return false;
