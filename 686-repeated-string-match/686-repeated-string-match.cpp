@@ -17,13 +17,12 @@ public:
         float n1=a.size();
         int n2=b.size();
       
-        int cnt= 1;
+        int cnt= ceil(n2/n1);
        
         string t=a;
-       while(t.size()<b.size()){
-           t+=a;
-           cnt++;
-       }
+        for(int i=1;i<cnt;i++){
+            t+=a;
+        }
      
        
            if(check(t,b))
