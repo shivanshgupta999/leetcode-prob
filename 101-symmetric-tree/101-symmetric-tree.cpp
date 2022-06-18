@@ -32,16 +32,9 @@ public:
         if(root==NULL){
             return true;
         }
-        bool check;
-        if(root->left!=NULL && root->right!=NULL && root->left->val == root->right->val)
-           check= true;
-        else if(root->left==NULL || root->right==NULL){
-            return root->left==root->right;
-        }
-        bool ans=x(root->left,root->right);
+    
+        return x(root->left,root->right);
      
-        if(ans&& check )
-            return true;
-        return false;
+        
     }
 };
