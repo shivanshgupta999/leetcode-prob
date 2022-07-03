@@ -24,6 +24,6 @@ public:
         else if(val==root->val){
             return root;
         }
-        return root;
+        return NULL;
     }
 };
