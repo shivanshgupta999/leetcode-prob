@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int x(int m, int n, vector<vector<int>>& dp){
+  /*  int x(int m, int n, vector<vector<int>>& dp){
          if(m==1 || n==1){
              return 1;
          }
@@ -13,10 +13,26 @@ public:
         int t2= x(m,n-1,dp);
         return dp[m][n]= t1+t2;
         
-    }
+    }*/
     int uniquePaths(int m, int n) {
         vector<vector<int>> dp(m+1,vector<int>(n+1,-1));
-        return x(m,n,dp);
+        dp[0][0]=0;
+        for(int i=1;i<m+1;i++){
+           dp[i][1]=1;
+        }
+        for(int i=1;i<n+1;i++){
+             dp[1][i]=1;
+          
+        }
+        
+        for(int i=2;i<=m;i++){
+          for(int j=2;j<=n;j++){
+                dp[i][j]= dp[i-1][j] + dp[i][j-1];
+        }
+        }
+        
+        
+        return dp[m][n];
 
     }
 };
