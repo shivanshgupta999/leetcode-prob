@@ -1,15 +1,10 @@
 class Solution {
 public:
     int x(int m, int n, vector<vector<int>>& dp){
-         if(m==1 && n==1){
+         if(m==1 || n==1){
              return 1;
          }
-         if(m==1 ){
-             return 1;
-         }
-         if(n==1){
-             return 1;
-         }
+        
         if(dp[m][n]!=-1){
             return dp[m][n];
         }
