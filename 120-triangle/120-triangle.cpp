@@ -2,7 +2,7 @@ class Solution {
 public:
     int minimumTotal(vector<vector<int>>& tri) {
         int n= tri.size();
-        vector<vector<int> >dp(n , vector<int>(n,INT_MAX));
+        vector<vector<int> >dp(n , vector<int>(tri[n-1].size(),INT_MAX));
         dp[0][0]=tri[0][0];
         for(int i=1;i<n;i++){
             int m=tri[i].size();
